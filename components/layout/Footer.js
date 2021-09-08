@@ -7,11 +7,11 @@ import Link from "next/link";
 function Footer() {
   return (
     <Fragment>
-       <section className={classes.freeImages}>
+       {/* <section className={classes.freeImages}>
         <Image src='/images/watches/footer_analog/clickiopath-nJaRLGPIQu4-unsplash.jpg' width={400} height={500} />
         <Image src='/images/watches/footer_analog/bruno-van-der-kraan-VRERJ5Mjp4c-unsplash.jpg' width={400} height={500} />
         <Image src='/images/watches/footer_analog/jenn-lopez-DhiZ2ZUQSS4-unsplash.jpg' width={400} height={500} />
-      </section>
+      </section> */}
       <section className={classes.root}>
         <div className={classes.logo}>
           <Image src="/images/logo/logo7.png" width={34} height={37} />

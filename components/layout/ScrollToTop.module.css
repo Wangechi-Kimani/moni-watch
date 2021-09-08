@@ -1,0 +1,18 @@
+.toTop {
+    z-index: 2;
+    position: fixed;
+    bottom: 2vh;
+    background-color: #e2dede;
+    /* background-color: #DCDCDC; */
+    color: rgb(17, 17, 17);
+    right: 5%;
+    cursor: pointer;
+    /* font-size: 2rem; */
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.toTop span:hover {
+    transition: "0.3s"
+}

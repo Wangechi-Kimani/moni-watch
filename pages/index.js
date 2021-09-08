@@ -23,7 +23,7 @@ export default function Home(props) {
             </div>
             <div style={{ padding: "10px" }}>
               {/* <button>Digital Watches</button> */}
-              <Button>Digital Watches</Button>
+              <Button>Analog Watches</Button>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function Home(props) {
         <div className={classes.inStockImg}>
           <div className={classes.inStockImgContent}>
             <Image
-              src="/images/watches/smart_watch/daniel-korpai-oOlPR-Fwd7A-unsplash.jpg"
+              src="/images/watches/smart_watch/rohan-SweqUUwNRQ0-unsplash.jpg"
               width={500}
               height={500}
             />
@@ -83,6 +83,37 @@ export default function Home(props) {
               <p>In stock</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className={classes.boostedSmartWatchSection}>
+        <div className={classes.boostedSmartWatch}>
+        <div className={classes.content}>
+            <h1>Smart Watch</h1>
+            <p>Be on time. Be tech savvy. Save on time. Be stylish. Be trendy. </p>
+            <div className={classes.actions}>
+              {/* <button>Shop Now</button> */}
+              <Button>Shop Now</Button>
+          </div>
+
+          </div>
+          <div style={{borderRadius: '5px'}}>
+            <Image
+              src="/images/watches/smart_watch/ab-KOqI8KyYahg-unsplash.jpg"
+              alt="smart watch"
+              width={400}
+              height={350}
+            />
+          </div>
+          <div>
+            <Image
+              src="/images/watches/smart_watch/infino-photography-KjsRBYfj9hA-unsplash.jpg"
+              alt="smart watch"
+              width={400}
+              height={350}
+            />
+          </div>
+         
         </div>
       </section>
 
@@ -101,66 +132,51 @@ export default function Home(props) {
         </div>
       </section>
 
-      <section className={classes.boostedSmartWatchSection}>
-        <div className={classes.boostedSmartWatch}>
-          <div>
-            <Image
-              src="/images/watches/smart_watch/ankush-minda-Gz0B_k5vQgQ-unsplash.jpg"
-              alt="smart watch"
-              width={500}
-              height={400}
-            />
-          </div>
-          <div>
-            <Image
-              src="/images/watches/smart_watch/alvan-nee-vhvH46ASxH0-unsplash.jpg"
-              alt="smart watch"
-              width={500}
-              height={400}
-            />
-          </div>
-          <div className={classes.content}>
-            <h3>Smart Watch</h3>
-            <p>Be on time. Be tech savvy. Save on time. Be stylish. Be trendy. </p>
-            <div className={classes.actions}>
-              {/* <button>Shop Now</button> */}
-              <Button>Shop Now</Button>
-          </div>
-          </div>
+      <section className={classes.test}>
+        <div className={classes.one}>
+         <h2>Durable</h2> <br/> <span>In Stock</span>
+        </div>
+        <div className={classes.two}>
+        <h2>Stylish</h2> <br/> <span>In Stock</span>
+        </div>
+        <div className={classes.three}>
+        <h2>Luxury</h2> <br/> <span>In Stock</span>
         </div>
       </section>
 
-      <section className={classes.inStockSection}>
+      
+
+      {/* <section className={classes.inStockSection}>
       <div className={classes.inStockImg}>
           <div className={classes.inStockImgContent}>
             <Image
-              src="/images/watches/smart_watch/daniel-korpai-oOlPR-Fwd7A-unsplash.jpg"
+              src="/images/watches/footer_analog/clickiopath-nJaRLGPIQu4-unsplash.jpg"
               width={500}
-              height={500}
+              height={600}
             />
             <div className={classes.text}>
-              <h3>Smart Watches</h3>
+              <h3>Ladie's Watches</h3>
               <p>In stock</p>
             </div>
           </div>
           <div className={classes.inStockImgContent}>
             <Image
-              src="/images/watches/analog_watch/bence-balla-schottner-9JORz4CuUcI-unsplash.jpg"
+              src="/images/watches/analog_watch/pat-taylor-12V36G17IbQ-unsplash.jpg"
               alt="analog watch"
               width={500}
-              height={500}
+              height={600}
             />
             <div className={classes.text}>
-              <h3>Digital Watches</h3>
+              <h3>Men's Watches</h3>
               <p>In stock</p>
             </div>
           </div>
           <div className={classes.inStockImgContent}>
             <Image
-              src="/images/watches/smart_watch/rachit-tank-2cFZ_FB08UM-unsplash.jpg"
+              src="/images/watches/smart_watch/daniel-korpai-QhF3YGsDrYk-unsplash.jpg"
               alt="analog watch"
               width={500}
-              height={500}
+              height={600}
             />
             <div className={classes.text}>
               <h3>Digital Watches</h3>
@@ -168,7 +184,7 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Fragment>
   );
 }

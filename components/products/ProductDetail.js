@@ -1,14 +1,18 @@
 import {useState} from "react";
 import classes from "./ProductDetail.module.css";
 import { useRouter } from "next/router";
+import { useCart } from "react-use-cart";
 
 
 function ProductDetail(props) {
   const router = useRouter();
+
+  const { addItem } = useCart();
   const [disabled, setDisabled] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+ 
   
-  async function addToCartHandler() { 
+  function addToCartHandler() { 
     setIsLoading(true);
     setDisabled(true);
     

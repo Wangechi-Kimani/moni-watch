@@ -7,7 +7,7 @@ import classes from "./ProductItem.module.css";
 
 function ProductItem(props) {
   const router = useRouter();
-  // const { addItem } = useCart();
+  const { addItem } = useCart();
 
 
   // const [session, loading] = useSession();
@@ -43,7 +43,7 @@ function ProductItem(props) {
   //   setIsLoading(false);
   // }
 
-  async function addToCartHandler() { 
+  function addToCartHandler() { 
     setIsLoading(true);
     setDisabled(true);
     

@@ -18,8 +18,12 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.jumbotron .content p {
+  padding: 50px 0 0 0;
+}
+
 .jumbotron .actions {
-  margin: 40px auto;
+  margin: 50px auto;
   display: flex;
   width: 40%;
   color: #ffffff;
@@ -82,7 +86,7 @@
   font-weight: bolder;
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
   cursor: pointer;
 }
 
@@ -98,8 +102,9 @@
 }
 
 .boostedSmartWatchSection {
-  margin-top: 30px;
+  margin: 30px 0;
 }
+
 
 .boostedSmartWatch {
   display: flex;
@@ -109,19 +114,77 @@
 
 .boostedSmartWatch .content {
   width:20%;
-  padding: 0 20px;
+  padding: 50px 20px;
 }
+
+.test {
+  display: flex;
+  margin-top: 50px;
+ /* align-items: center; */
+ text-align: center;
+  color: #ffffff;
+  justify-content: space-between;
+  transition: transform .2s ease-in-out;
+}
+
+.test span {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.one {
+  background: url('/images/watches/footer_analog/pixel-bee-u8isJQ6QjF4-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.one:hover,
+.two:hover,
+.three:hover {
+  transform: scale(1.05);
+}
+
+.one h2,
+.two h2,
+.three h2{
+  margin: 200px auto 0;
+}
+.two {
+  background: url('/images/watches/smart_watch/onur-binay-8OQt1zTnJeE-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    width: 100%;
+    margin: 0 10px;
+}
+.three {
+  background: url('/images/watches/smart_watch/ash-edmonds--Tr4FdDbFEw-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    width: 100%;
+    margin: 0 10px;
+}
+
 
 @media(max-width:860px) {
   .jumbotron {
     background: url('/images/watches/analog_watch/jumbotron_two_high_performance.png');
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    color: rgb(5, 5, 5);
   } 
 
   .jumbotron .content {
     padding: 50px 0 0 0;
+  }
+
+  .jumbotron .content p {
+    padding: 30px 10px 0 10px;
+    font-weight: bold;
   }
 
   .jumbotron .actions {
@@ -146,14 +209,28 @@
   }
 
   .boostedSmartWatch .content{
-    padding:0 20px;
+    padding:20px 20px;
     width:100%;
+    text-align: center;
+  }
+
+  .test {
+    display: block;
+    margin:0;
+  }
+
+  .test .one, 
+  .test .two,
+  .test .three {
+    margin: 0;
+    height: 400px;
+    padding: 0;
   }
 }
 
 @media(max-width:600px) {
   .jumbotron {
-    background: url('/images/watches/analog_watch/tyler-clemmensen-WCbHuYngg44-unsplash.jpg');
+    background: url('/images/watches/footer_analog/laura-chouette-CIQYQYGn6a4-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }

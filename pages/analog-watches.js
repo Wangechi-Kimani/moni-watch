@@ -27,9 +27,10 @@ const AnalogWatchesPage = (props) => {
     if (currentPage === 1) {
       setNextPrevProducts([]);
     } else {
+      setLoading(true);
       const fetchedProducts = await fetchProducts(currentPage);
       setNextPrevProducts(fetchedProducts);
-      // setLoading(false);
+      setLoading(false);
       // console.log(fetchedProducts);
     }
     // console.log(currentPage);
@@ -43,14 +44,14 @@ const AnalogWatchesPage = (props) => {
     setCurrentPage(prevPageNum.current - 1);
   };
 
-  // if (loading) {
-  //   return (
-  //     <div style={{ textAlign: "center" }}>
-  //       {/* <ScaleLoader color="#ad0244" /> */}
-  //       {/* <p>Loading...</p> */}
-  //     </div>
-  //   );
-  // }
+  if (loading) {
+    return (
+      <div style={{ textAlign: "center" }}>
+        <ScaleLoader color="#ad0244" />
+        {/* <p>Loading...</p> */}
+      </div>
+    );
+  }
 
   if (nextPrevProducts.length === 0 && currentPage !== 1) {
     return (
@@ -61,7 +62,6 @@ const AnalogWatchesPage = (props) => {
     );
   }
 
-  if(loading) return <p>Loading...</p>
 
   return (
     <Fragment> 

@@ -5,6 +5,7 @@ const ProductDetailPage = (props) => {
   const { product } = props;
     return (
       <ProductDetail
+        id={product.id}
         image={product.image}
         title={product.title}
         price={product.price}
