@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useRef, useState, useEffect, Fragment } from "react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
-import  classes  from "../styles/analog_watch.module.css";
+import  classes  from "../styles/smart_analog_watch.module.css";
 
 import ProductList from "../components/products/ProductList";
 import Button from "../components/ui/Button";
@@ -72,13 +72,13 @@ const AnalogWatchesPage = (props) => {
 
       <div className={classes.container}>
         {currentPage !== 1 && (
-          <div>
-            <Button onClick={goToPrevPage}>Prev Page</Button>
-          </div>
+          <span>
+            <button onClick={goToPrevPage}>Prev Page</button>
+          </span>
         )}
         {showNextBtn && (
           <div>
-            <Button onClick={goToNextPage}>Next Page</Button>
+            <button onClick={goToNextPage}>Next Page</button>
           </div>
         )}
       </div>

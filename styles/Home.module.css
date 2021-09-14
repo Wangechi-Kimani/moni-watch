@@ -1,10 +1,12 @@
 .jumbotron {
   width: 100%;
-  background-image: url('/images/watches/analog_watch/jumbotron_watch.png');
+  background-image: url('/images/watches/footer_analog/pixel-bee-u8isJQ6QjF4-unsplash.jpg');
+  /* background-image: url('/images/watches/analog_watch/jumbotron_watch.png'); */
   height: 700px;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+  color: #ffffff;
 }
 
 .jumbotron .content {
@@ -16,10 +18,14 @@
 
 .jumbotron .content h1 {
   font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: lighter;
+  text-transform: capitalize;
 }
 
 .jumbotron .content p {
-  padding: 50px 0 0 0;
+  padding: 20px 0 0 0;
+  font-size: 1.5rem;
 }
 
 .jumbotron .actions {
@@ -93,12 +99,16 @@
 .jumbotron_two_high_performance {
   width: 100%;
   background-image: url('/images/watches/analog_watch/jumbotron_two_high_performance.png');
-  height: 800px;
+  height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   color: #ffffff;
   padding: 50px 0 0 0;
+}
+
+.jumbotron_two_high_performance .actions {
+    padding-top: 30px;
 }
 
 .boostedSmartWatchSection {
@@ -111,75 +121,40 @@
   justify-content: space-evenly;
 }
 
+.boostedSmartWatch .content h1 {
+  color: #ad0244;
+}
+
 
 .boostedSmartWatch .content {
   width:20%;
-  padding: 50px 20px;
+  padding: 30px 20px;
 }
 
-.test {
-  display: flex;
-  margin-top: 50px;
- /* align-items: center; */
- text-align: center;
-  color: #ffffff;
-  justify-content: space-between;
-  transition: transform .2s ease-in-out;
+.boostedSmartWatch .content p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  justify-items: center;
 }
 
-.test span {
-  font-size: 1.4rem;
-  font-style: italic;
-}
-
-.one {
-  background: url('/images/watches/footer_analog/pixel-bee-u8isJQ6QjF4-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    width: 100%;
-    margin: 0 10px;
-}
-
-.one:hover,
-.two:hover,
-.three:hover {
-  transform: scale(1.05);
-}
-
-.one h2,
-.two h2,
-.three h2{
-  margin: 200px auto 0;
-}
-.two {
-  background: url('/images/watches/smart_watch/onur-binay-8OQt1zTnJeE-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    width: 100%;
-    margin: 0 10px;
-}
-.three {
-  background: url('/images/watches/smart_watch/ash-edmonds--Tr4FdDbFEw-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    width: 100%;
-    margin: 0 10px;
-}
 
 
 @media(max-width:860px) {
   .jumbotron {
-    background: url('/images/watches/analog_watch/jumbotron_two_high_performance.png');
+    background: url('/images/watches/analog_watch/tadeusz-lakota-Tb38UzCvKCY-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    color: rgb(5, 5, 5);
+    /* color: rgb(255, 253, 253); */
   } 
 
   .jumbotron .content {
     padding: 50px 0 0 0;
+  }
+
+  .jumbotron .content h1 {
+    font-size: 2rem;
+    padding: 0 20px;
+    font-weight: 600;
   }
 
   .jumbotron .content p {
@@ -204,6 +179,21 @@
     flex-wrap: wrap;
   }
 
+  .inStockImgContent {
+    padding: 0;
+  }
+
+  .jumbotron_two_high_performance {
+    width: 100%;
+    background-image: url('/images/watches/analog_watch/pat-taylor-12V36G17IbQ-unsplash.jpg');
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #ffffff;
+    padding: 50px 0 0 0;
+  }
+
   .boostedSmartWatch {
     flex-wrap: wrap;
   }
@@ -213,29 +203,22 @@
     width:100%;
     text-align: center;
   }
-
-  .test {
-    display: block;
-    margin:0;
-  }
-
-  .test .one, 
-  .test .two,
-  .test .three {
-    margin: 0;
-    height: 400px;
-    padding: 0;
-  }
 }
 
-@media(max-width:600px) {
+/* @media(max-width:600px) {
   .jumbotron {
-    background: url('/images/watches/footer_analog/laura-chouette-CIQYQYGn6a4-unsplash.jpg');
+    background: url('/images/watches/analog_watch/tadeusz-lakota-Tb38UzCvKCY-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    color: black;
+  }
+
+  .jumbotron .content h1 {
+    font-size: 2rem;
+    padding: 0 20px;
   }
 
   .jumbotron .actions button {
     margin-left: 0;
   }
-}
+} */

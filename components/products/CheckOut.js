@@ -1,26 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import classes from "./CheckOut.module.css";
 
 import OrderList from "../products/OrderList";
 
 const CheckOut = (props) => {
-  const [name, setName] = useState('React');
+  const [disabled, setDisabled] = useState(false);
+  const router = useRouter();
 
-  const handleChange = (event) => {
-    setName(event.target.value)
-    console.log(name)
-  }
+  useEffect(() => {
+    if(props.total <= 0) {
+      setDisabled(true)
+    }
+  }, [props.total])
 
   const goBackHandler = () => {
     history.back()
   }
 
+  const checkOutHandler = () => {
+    router.push('/');
+  }
+
   return (
     <div className={classes.container}>
       <div className={classes.payment}>
-        <h4>Payment</h4>
+        <div className={classes.payment_card}>
+          <h4>Payment</h4>
+          <div>
+            <img src='/images/payment/visa_card_two.png'/>
+            <img src='/images/payment/master_card_three.png'/>
+          </div>
+        </div>
         <form>
-          <div className={classes.paymentType} onChange={handleChange}>
+          {/* <div className={classes.paymentType}>
             <div className={classes.input}>
               <input type="radio" value="credit/debit" name="payment_type" />{" "}
               Card
@@ -28,7 +41,7 @@ const CheckOut = (props) => {
             <div className={classes.input}>
               <input type="radio" value="Paypal" name="payment_type" /> Paypal
             </div>
-          </div>
+          </div> */}
 
           <div className={classes.control}>
             <label htmlFor="card_number">Card Number</label>
@@ -55,7 +68,7 @@ const CheckOut = (props) => {
             {/* <Button onClick={goBackHandler}>BACK</Button> */}
             </div>
             <div>
-            <button>PAY Ksh. {props.total}</button>
+            <button onClick={checkOutHandler} disabled={disabled}>PAY Ksh. {props.total}</button>
             {/* <Button>PAY Ksh. {props.total}</Button> */}
             </div>
             

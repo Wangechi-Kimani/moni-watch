@@ -14,7 +14,7 @@ const OrderItem = (props) => {
           <img src={props.image} alt={props.title} />
         </div>
 
-        <div>
+        <div className={classes.icon}>
           <h5>{props.title}</h5>
           <FontAwesomeIcon
             icon={faTrashAlt}

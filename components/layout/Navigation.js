@@ -64,11 +64,17 @@ function MainNavigation(props) {
           <span className={classes.title}>Moni Inc.</span>
         </span>
         <ul className={isChecked ? classes.checked : ""}>
-          <li
+        <li
             className={router.pathname === "/" ? classes.active : ""}
             onClick={closeSideMenuNav}
           >
-            <Link href="/">smart watches</Link>
+            <Link href="/">Home</Link>
+          </li>
+          <li
+            className={router.pathname === "/smart-watches" ? classes.active : ""}
+            onClick={closeSideMenuNav}
+          >
+            <Link href="/smart-watches">smart watches</Link>
           </li>
           <li
             className={

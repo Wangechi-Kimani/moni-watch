@@ -1,29 +1,39 @@
 import { Fragment } from "react";
-// import { MongoClient } from "mongodb";
-
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 import Button from "../components/ui/Button";
 import classes from "../styles/Home.module.css";
+import { connectDB, getHomePageProducts } from "../utils/db";
 
 export default function Home(props) {
+
+  const router = useRouter();
+
+  function goToAnalogShopHandler() {
+    router.push('/analog-watches')
+  }
+
+  function goToSmartShopHandler() {
+    router.push('/smart-watches')
+  }
+
   return (
     <Fragment>
       <section className={classes.jumbotron}>
         <div className={classes.content}>
           <h1>Welcome to Moni Watches Inc.</h1>
           <p>
-            The place for quality, luxury, and trendy watches to help you manage
-            your time
+            The place for quality, elegant, and trendy watches.
           </p>
           <div className={classes.actions}>
             <div style={{ padding: "10px" }}>
               {/* <button>Smart Watches</button> */}
-              <Button>Smart Watches</Button>
+              <Button onClick={goToSmartShopHandler}>Smart Watches</Button>
             </div>
             <div style={{ padding: "10px" }}>
               {/* <button>Digital Watches</button> */}
-              <Button>Analog Watches</Button>
+              <Button onClick={goToAnalogShopHandler}>Analog Watches</Button>
             </div>
           </div>
         </div>
@@ -48,13 +58,12 @@ export default function Home(props) {
         <div className={classes.content}>
           <h1>
             Looking for quality watches. Something fashionable yet luxurious?
-            Look no further
+            Look no further.
           </h1>
           <p>
-            Boosted USA acquired all of the remaining inventory directly from
-            Boosted. This means we have the electric skateboards and scooter you
-            all love and have been looking for. Get your hands on these highly
-            sought after products while supplies last.
+          Moni Watches Inc. features over 20 brands 
+          of watches. Our clients may select from a variety of products that guarantee durability 
+          and quality. 
           </p>
           <hr />
         </div>
@@ -90,16 +99,16 @@ export default function Home(props) {
         <div className={classes.boostedSmartWatch}>
         <div className={classes.content}>
             <h1>Smart Watch</h1>
-            <p>Be on time. Be tech savvy. Save on time. Be stylish. Be trendy. </p>
+            <p>Be on time. Be tech savvy.Be stylish. Be trendy. </p>
             <div className={classes.actions}>
               {/* <button>Shop Now</button> */}
-              <Button>Shop Now</Button>
+              <Button onClick={goToSmartShopHandler}>Shop Now</Button>
           </div>
 
           </div>
           <div style={{borderRadius: '5px'}}>
             <Image
-              src="/images/watches/smart_watch/ab-KOqI8KyYahg-unsplash.jpg"
+              src="/images/watches/smart_watch/simon-daoudi-2wFoa040m8g-unsplash.jpg"
               alt="smart watch"
               width={400}
               height={350}
@@ -118,31 +127,20 @@ export default function Home(props) {
       </section>
 
       <section className={classes.jumbotron_two_high_performance}>
-        <h5>High Performance</h5>
-        <h1>Standard Smart Watches</h1>
+        <h3>High Performance</h3>
+        <h1>Quality Analog Watches</h1>
        
-          <p style={{paddingTop: '-50px'}}>
-            Cruising campus, going to work or getting through that long list of
-            errands has never been easier or more fun.
+          <p>
+            Get to a meeting on time. Get to a party on time. Don't keep your date
+            waiting. Shopping has never been easier.
           </p>
      
         <div className={classes.actions}>
-          {/* <button>Shop Now</button> */}
-          <Button>Shop Now</Button>
+          <Button onClick={goToAnalogShopHandler}>Shop Now</Button>
         </div>
       </section>
 
-      <section className={classes.test}>
-        <div className={classes.one}>
-         <h2>Durable</h2> <br/> <span>In Stock</span>
-        </div>
-        <div className={classes.two}>
-        <h2>Stylish</h2> <br/> <span>In Stock</span>
-        </div>
-        <div className={classes.three}>
-        <h2>Luxury</h2> <br/> <span>In Stock</span>
-        </div>
-      </section>
+    
 
       
 
@@ -190,30 +188,23 @@ export default function Home(props) {
 }
 
 
-// export async function getStaticProps() {
-//   const MONGODB_URI =
-//     "mongodb+srv://wangechi_k:wangechi_k@onlinestore.bbwik.mongodb.net/moni_inc?retryWrites=true&w=majority";
+export async function getStaticProps() {
+  const client = await connectDB();
 
-//   const client = await MongoClient.connect(MONGODB_URI, {
-//     useUnifiedTopology: true});
-//   const db = client.db();
+  const products = await getHomePageProducts(client, 'watches', 10);
 
-//   const meetupCollection = db.collection("watches");
+  client.close();
 
-//   const meetups = await meetupCollection.find().toArray();
-//   client.close();
-
-//   return {
-//     props: {
-//       meetups: meetups.map((meetup) => ({
-//         title: meetup.title,
-//         price: meetup.price,
-//         image: meetup.image,
-//         id: meetup._id.toString()
-//       })),
-//     },
-//     revalidate: 60,
-//   };
-// }
+  return {
+    props: {
+      products: products.map((product) => ({
+        title: product.title,
+        price: product.price,
+        id: product._id.toString()
+      })),
+    },
+    revalidate: 60,
+  };
+}
 
 

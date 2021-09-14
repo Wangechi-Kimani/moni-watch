@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.container span {
+    margin-right: 40px;
+}
+
+.container button {
+    background:#ad0244;
+  color: #ffffff;
+  padding: 8px;
+  border-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  width:150px;
+  text-transform: uppercase;
+}
+
+@media(max-width:860px) { 
+    .container {
+        flex-wrap: wrap;
+    }
+}

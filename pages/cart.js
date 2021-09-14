@@ -9,7 +9,7 @@ const CartPageTest = () => {
   const router = useRouter();
   const { hasMounted } = useMounted();
 
-  const { items, isEmpty } = useCart();
+  const { items } = useCart();
   const numOfItemsInCart = hasMounted ? items.length : 0;
 
   const goToCheckOutPage = () => {

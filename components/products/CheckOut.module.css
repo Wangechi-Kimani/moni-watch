@@ -15,6 +15,18 @@ background-color: white;
     border-right: 1px solid #ad0244b2;
 }
 
+.payment_card {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 0;
+}
+
+.payment_card img {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+}
+
 .paymentType {
   display: flex;
 }
@@ -85,7 +97,11 @@ cursor: pointer;
 text-transform: uppercase;
 }
 
-.actions button:hover {
+.actions button:hover:enabled {
+  background:rgb(157, 158, 157);
+}
+
+.actions button:disabled {
   background:rgb(157, 158, 157);
 }
 

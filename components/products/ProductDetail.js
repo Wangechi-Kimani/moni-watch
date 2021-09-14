@@ -30,8 +30,18 @@ function ProductDetail(props) {
     }, 2000);
   }
 
-  function addToCheckOutHandler() {
-    router.push('/checkout');
+  async function addToCheckOutHandler() {
+    const product = {
+      id:props.id,
+      price:props.price,
+      title:props.title,
+      image:props.image
+    }
+    addItem(product);
+
+    setTimeout(() => {
+      router.push('/checkout');
+    }, 2000);
   }
 
 

@@ -16,6 +16,17 @@ export async function insertDocument(client, collection, document) {
   return result;
 }
 
+export async function getHomePageProducts(client, collection, limit) {
+  const db = client.db();
+  const products = await db
+    .collection(collection)
+    .find()
+    .limit(limit)
+    .toArray();
+
+  return products;
+}
+
 export async function getProducts(client, collection, skip, limit) {
   const db = client.db();
   const products = await db

@@ -3,17 +3,23 @@
     justify-content: space-evenly;
     font-family: 'Playfair Display', serif;
     background-color: rgb(220, 220, 220);
+    /* margin-top: -50px; */
+    padding: 30px 0;
+    text-align: center;
 }
 
 .root .logo {
-    text-align: center;
     width: 30%;
     font-size: 2rem;
-    padding-top: 40px;
+    padding-top: 50px
+}
+
+.root .logo img {
+   width: 34px;
+   height: 37px;
 }
 
 .root .bottomNav {
-    text-align: center;
     width: 30%;
 }
 
@@ -29,7 +35,7 @@
 }
 
 .bottomNav .listTitle {
-    padding-bottom: '40px';
+    padding-bottom: 40px;
     font-weight: 600;
 }
 
@@ -42,7 +48,6 @@
 }
 
 .root .about {
-    text-align: center;
     width: 30%;
     padding: 0 40px;
     font-family: 'Roboto', sans-serif;
@@ -65,8 +70,9 @@
 
 @media(max-width:860px) { 
     .root {
-        flex-wrap: wrap;
-        text-align: start;
+        /* flex-wrap: wrap;
+        text-align: start; */
+        display: block;
     }
 
    .root .logo {
@@ -81,6 +87,10 @@
 
     .root .about {
         width: 100%;
+    }
+
+    .bottomNav ul {
+        padding: 0;
     }
 
 }
