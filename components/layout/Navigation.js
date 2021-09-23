@@ -84,7 +84,7 @@ function MainNavigation(props) {
           >
             <Link href="/analog-watches">analog watches</Link>
           </li>
-          <li
+          {/* <li
             className={router.pathname === "/gift-box" ? classes.active : ""}
             onClick={closeSideMenuNav}
           >
@@ -95,7 +95,7 @@ function MainNavigation(props) {
             onClick={closeSideMenuNav}
           >
             <Link href="/contact">contact us</Link>
-          </li>
+          </li> */}
 
           <li
             className={router.pathname === "/new-product" ? classes.active : ""}
@@ -118,7 +118,7 @@ function MainNavigation(props) {
             </li>
           )}
 
-          {session && (
+          {/* {session && (
             <li
               className={classes.signInBtn}
               onClick={closeSideMenuNav}
@@ -130,7 +130,19 @@ function MainNavigation(props) {
                 </a>
               </Link>
             </li>
-          )}
+          )} */}
+         
+            <li
+              className={classes.signInBtn}
+              onClick={closeSideMenuNav}
+              title="My Cart"
+            >
+              <Link href="/cart">
+                <a>
+                  <FontAwesomeIcon icon={faCartArrowDown} />
+                </a>
+              </Link>
+            </li>
 
           {session && (
             <li
