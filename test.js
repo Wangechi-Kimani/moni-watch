@@ -22,25 +22,14 @@
 // console.log(result);
 
 // const string = 'id name age score NULL 12 17 Betty 28 11';
-const string = 'id,name,age,score\n1, NULL,12\n17,Betty,28,11';
+const string = 'id,name,age,score\n1,NULL,12\n17,Betty,28,11';
 
-function solution(A) {
-    A.split(',');
-    for(let i = 0; i < A.length; i++) {
-        if(A[i] === 'N') {
-            A.slice(A[i], i)
-        }
-        if(A[i] === 'U') {
-            A.slice(A[i], i)
-        }
-        if(A[i] === 'L') {
-            A.slice(A[i], i)
-        }
-        if(A[i] === 'L') {
-            A.slice(A[i], i)
-        }
-    }
-    return A;
+function solution(A){
+    const regexNewLine = /\n1/g;
+    const newStr = A.replace(regexNewLine, '');
+    const regexNULL = /NULL,/g;
+    const updatedStr = newStr.replace(regexNULL, '');
+    return updatedStr;  
 }
 
 const result = solution(string);
