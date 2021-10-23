@@ -21,17 +21,32 @@
 // const result = solution(numbers);
 // console.log(result);
 
-// const string = 'id name age score NULL 12 17 Betty 28 11';
-const string = 'id,name,age,score\n1,NULL,12\n17,Betty,28,11';
+/*------------------------------------------------- */
+// const string = 'id,name,age,score\n1,NULL,12\n17,Betty,28,11';
 
-function solution(A){
-    const regexNewLine = /\n1/g;
-    const newStr = A.replace(regexNewLine, '');
-    const regexNULL = /NULL,/g;
-    const updatedStr = newStr.replace(regexNULL, '');
-    return updatedStr;  
+// function solution(A){
+//     const regexNewLine = /\n1/g;
+//     const newStr = A.replace(regexNewLine, '');
+//     const regexNULL = /NULL,/g;
+//     const updatedStr = newStr.replace(regexNULL, '');
+//     return updatedStr;
+// }
+
+// const result = solution(string);
+// console.log(result);
+/*------------------------------------------------- */
+
+const string = '-H-HH--';
+// const string = "-H-H-H-H-H";
+
+function solution(S) {
+  let tank = 0;
+  for (let i = 0; i < S.length; i++) {
+    if(S[i] === 'H' && S[i+1] === '-') {
+        tank = tank + 1;
+    }
+  }
+  return tank;
 }
 
-const result = solution(string);
-console.log(result);
-
+console.log(solution(string));
