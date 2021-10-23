@@ -22,6 +22,10 @@ const CheckOut = (props) => {
     router.push('/');
   }
 
+  const lipaNaMPESAHandler = () => {
+    console.log(`Call the MPESA Express Handler`)
+  }
+
   return (
     <div className={classes.container}>
       <div className={classes.payment}>
@@ -71,7 +75,9 @@ const CheckOut = (props) => {
             <button onClick={checkOutHandler} disabled={disabled}>PAY Ksh. {props.total}</button>
             {/* <Button>PAY Ksh. {props.total}</Button> */}
             </div>
-            
+            <div>
+            <button onClick={lipaNaMPESAHandler}>LIPA NA MPESA</button>
+            </div>
           </div>
 
         </form>
