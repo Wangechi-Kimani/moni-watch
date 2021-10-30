@@ -22,10 +22,6 @@ const CheckOut = (props) => {
     router.push('/');
   }
 
-  const lipaNaMPESAHandler = () => {
-    console.log(`Call the MPESA Express Handler`)
-  }
-
   return (
     <div className={classes.container}>
       <div className={classes.payment}>
@@ -75,15 +71,12 @@ const CheckOut = (props) => {
             <button onClick={checkOutHandler} disabled={disabled}>PAY Ksh. {props.total}</button>
             {/* <Button>PAY Ksh. {props.total}</Button> */}
             </div>
-            <div>
-            <button onClick={lipaNaMPESAHandler}>LIPA NA MPESA</button>
-            </div>
           </div>
 
         </form>
       </div>
 
-      <div className={classes.order}>
+      {/* <div className={classes.order}>
       <h4>Your Order</h4>
        <OrderList />
        <div className={classes.orderTotalDetails}>
@@ -98,7 +91,7 @@ const CheckOut = (props) => {
          <p style={{fontWeight: 'bold'}}>Total</p>
          <p style={{fontWeight: 'bold'}}>Ksh.{props.total}</p>
        </div>
-      </div> 
+      </div>  */}
     </div>
   );
 };

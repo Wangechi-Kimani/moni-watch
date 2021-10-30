@@ -10,9 +10,9 @@ background-color: white;
 }
 
 .payment {
-    width: 70%;
-    padding: 0 50px;
-    border-right: 1px solid #ad0244b2;
+    /* width: 70%; */
+    /* padding: 0 50px; */
+    /* border-right: 1px solid #ad0244b2; */
 }
 
 .payment_card {
@@ -175,14 +175,3 @@ text-transform: uppercase;
     margin-top: 20px;
   }
 }
-
-/* @media(max-width:860px) {
-  .container {
-      display: block;
-  }
-  .payment {
-    width: 70%;
-    padding: 0 50px;
-    border:none
-}
-} */
